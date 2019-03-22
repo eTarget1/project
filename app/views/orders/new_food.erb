@@ -1,0 +1,6 @@
+<h1>New Order on <%= @food.name %></h1>
+
+<form method="post" action="/orders/new/<%= @food.id %>">
+<input type="text" name="name" placeholder="Order Name">
+<input class="btn btn-primary" type="submit" name="create" value="Create">
+</form>

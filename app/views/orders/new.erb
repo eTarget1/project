@@ -1,0 +1,15 @@
+<h1>New Order</h1>
+
+<form method="post" action="/orders/new">
+<input type="text" name="name" placeholder="Order Name">
+
+<br>
+<label>Add To An Existing food</label><br>
+<% @foods.each do |food| %>
+<% if food.user_id == @user.id %>
+<input type="checkbox" name="food_id" value="<%=food.id%>"><%=food.name%><br>
+<% end %>
+<% end %>
+<br>
+<input class="btn btn-primary" type="submit" name="create" value="Create">
+</form>

@@ -1,0 +1,6 @@
+<p>Do you want to delete <%= @order.name %>?</p>
+
+<form method="post" action="/tasks/<%=@task.id%>">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+<form>
