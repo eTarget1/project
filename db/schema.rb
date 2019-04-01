@@ -14,6 +14,8 @@ ActiveRecord::Schema.define(version: 2019_03_22_161608) do
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
+    t.integer "quantity"
+    t.decimal "price"
     t.integer "user_id"
   end
 

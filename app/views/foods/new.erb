@@ -1,8 +1,10 @@
 <h1>New Food</h1>
 
-<form method="post" action="/lists/new">
+<form method="post" action="/foods/new">
 
-<input type="text" name="name" placeholder="List Name"><br><br>
-<input type="text" name="tasks[name]" placeholder="Add Your First Task"><br><br>
+<input type="text" name="name" placeholder="Food Name"><br><br>
+<input type="number" name="quantity" placeholder="Quantity"><br><br>
+
+<input type="text" name="orders[name]" placeholder="Add Your First Orders"><br><br>
 <input class="btn btn-primary" type="submit" name="create" value="Create">
 </form>

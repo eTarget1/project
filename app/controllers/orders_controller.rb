@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
       erb :'orders/show'
     end
   
-    get '/orders/new' do
+    get '/orders/new' do 
       redirect_if_not_logged_in
       @user = current_user
       @foods = Food.all
@@ -15,14 +15,14 @@ class OrdersController < ApplicationController
     end
   
     post '/orders/new' do
-      Orders.create(:name => params[:name], :food_id => params[:food_id])
+      Order.create(:name => params[:name], :food_id => params[:food_id])
       redirect '/orders'
     end
   
     get '/orders/new/:id' do
       redirect_if_not_logged_in
       @food = Food.find_by_id(params[:id])
-      erb :'/orders/new_on_list'
+      erb :'/orders/new_food'
     end
   
     post '/orders/new/:id' do

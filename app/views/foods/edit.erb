@@ -1,13 +1,14 @@
-<h1>Edit Food Name</h1>
+<h1>Edit Food</h1>
 
 <form method="post" action="/foods/<%=@food.id%>">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
 <input type="text" name="name" value="<%=@food.name%>"><br><br>
+<input type="number" name="quantity" placeholder="Quantity"><br><br>
 
-<% @list.tasks.each do |task| %>
-<h1><i class="fa fa-minus"></i><%= task.name %></h1>
-<a href="/orders/<%= order.id %>/edit"><i class="fa fa-pencil"></i> Edit Task</a>
-<a href="/orders/<%= order.id %>/delete"><i class="fa fa-times"></i> Delete Task</a>
+<% @food.orders.each do |order| %>
+<h1><i class="fa fa-minus"></i><%= order.name %></h1>
+<a href="/orders/<%= order.id %>/edit"><i class="fa fa-pencil"></i> Edit Order</a>
+<a href="/orders/<%= order.id %>/delete"><i class="fa fa-times"></i> Delete Order</a>
 <% end %>
 
 <br>

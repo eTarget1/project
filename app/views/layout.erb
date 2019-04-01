@@ -1,13 +1,25 @@
 <!doctype html>
 <html>
   <head>
-    <title>ToDoo - A To Do App, Dude</title>
+    <title>Bingo -App Services</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  </head>
+  
+    <style>
+      .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      }
+    </style>
+    </head>
 <body>
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="/orders"><i class="fa fa-paperclip"></i> Bingo Fast Food</a>
@@ -32,7 +44,9 @@
   <div class="col-md-6 col-xs-offset-2">
 
   <%= yield %> 
-
+  <div class="footer">
+  <p>&copy; <%= Time.new.year %> Bingo Fast Food App</p>
+  </div>
   </div>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
