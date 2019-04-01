@@ -2,6 +2,6 @@
 
 <form method="post" action="/orders/new/<%= @food.id %>">
 <input type="text" name="name" placeholder="Order Name">
-<input type="number" name="quantity" placeholder="Quantity"><br><br>
+<input type="number" min='0' name="quantity" placeholder="Quantity"><br><br>
 <input class="btn btn-primary" type="submit" name="create" value="Create">
 </form>

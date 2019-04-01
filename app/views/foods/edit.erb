@@ -3,7 +3,7 @@
 <form method="post" action="/foods/<%=@food.id%>">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
 <input type="text" name="name" value="<%=@food.name%>"><br><br>
-<input type="number" name="quantity" placeholder="Quantity"><br><br>
+<input type="number" min='0' name="quantity" placeholder="Quantity"><br><br>
 
 <% @food.orders.each do |order| %>
 <h1><i class="fa fa-minus"></i><%= order.name %></h1>

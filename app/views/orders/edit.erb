@@ -2,7 +2,7 @@
 <form method="post" action="/orders/<%= @order.id %>">
 <input id="hidden" type="hidden" name="_method" value="patch">
 <input type="text" name="name" placeholder="New Name"><br><br>
-<input type="number" name="quantity" placeholder="Quantity"><br><br>
+<input type="number" min='0' name="quantity" placeholder="Quantity"><br><br>
 
 <input type="text" name="orders[name]" placeholder="Add Your Orders"><br><br>
 
