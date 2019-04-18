@@ -7,7 +7,7 @@
 <div class="col-6">
     <% @foods.each do |food|%>
     <% if food.user_id == @user.id %>
-    <div> <h2><%= food.name %></h2> <h2><%= food.quantity %></h2></div>
+    <div> <h2><%= food.name %></h2> <h2><%= food.quantity %></h2><h2><%= food.price %></h2> </div>
     <a href="/foods/<%=food.id%>/edit"><i class="fa fa-pencil"></i> Edit Food</a>
     <a href="/foods/<%=food.id%>/delete"><i class="fa fa-times"></i> Delete Food</a>
     <h4><a href="orders/new/<%=food.id%>"><i class="fa fa-plus"></i> New Order</a></h4>

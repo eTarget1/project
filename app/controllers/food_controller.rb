@@ -7,7 +7,8 @@ class FoodsController < ApplicationController
   
     post '/foods/new' do
       @user = current_user
-      food = @user.foods.create(:name => params[:name], :quantity => params[:quantity], :price => params[:price])
+      total = params[:quantity].to_i * 15.25
+      food = @user.foods.create(:name => params[:name], :quantity => params[:quantity], :price => total)
       order = food.orders.create(:name => params[:orders][:name])
       redirect '/orders'
     end

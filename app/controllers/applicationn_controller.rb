@@ -10,6 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
 
+
   get '/' do 
     erb :index
   end
@@ -21,6 +22,16 @@ class ApplicationController < Sinatra::Base
   get '/contact' do
     erb :contact
   end 
+
+  post '/contact' do
+    if params[:fullname] == "" || params[:phone] == "" || params[:email] == "" || params[:message]=="" 
+      # flash[:notice] = "Your details can not be saved with missing field, please try again."
+      #  puts error_message
+      redirect '/contact'
+    else
+      erb :thanks
+    end
+  end
 
   helpers do
     def redirect_if_not_logged_in

@@ -3,7 +3,7 @@ class CreateFoods < ActiveRecord::Migration[5.2]
     create_table :foods do |t|
       t.string :name
       t.integer :quantity 
-      t.decimal :price
+      t.float :price
       t.integer :user_id
     end
   end
